@@ -7,8 +7,8 @@ import MyAccount from '../MyAccount';
 import MyOrder from '../MyOrder';
 import MyOrders from '../MyOrders';
 import SignIn from '../SignIn';
-import NotFoundignIn from '../NotFound';
-
+import NotFound from '../NotFound';
+import NavBar from '../../Components/NavBar/index'
 
 const AppRoutes = () => {
   const routes = useRoutes([
@@ -17,15 +17,16 @@ const AppRoutes = () => {
     {path: '/my-order', element: <MyOrder />},
     {path: '/my-orders', element: <MyOrders />},
     {path: '/sign-in', element: <SignIn />},
-    {path: '*', element: <NotFoundignIn />},
+    {path: '*', element: <NotFound />},
   ])
   return routes
 }
 
 const App = () => {
   return (
-    <div className="bg-red-900">
+    <div className="bg-red-100">
       <BrowserRouter>
+        <NavBar />
         <AppRoutes />      
       </BrowserRouter>
     </div>
