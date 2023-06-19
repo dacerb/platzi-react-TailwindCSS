@@ -24,11 +24,19 @@ const Home = () => {
             return <Card />
           })
           Y sin... return
-        */
-          
           products?.map(products => (
-            <Card key={data.id} {...products} />
+            <Card key={products.id} />
           ))
+                    
+        */
+
+          
+
+          products?.map(product => (
+              <Card  key={product.id} {...product}/>
+          ))
+          
+
       }
     </Layout>
   )
