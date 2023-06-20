@@ -16,28 +16,13 @@ const Home = () => {
 
   return (
     <Layout>
-      Home
-      {
-        /*
-            Utilizando return
-            products?.map(() => {
-            return <Card />
-          })
-          Y sin... return
-          products?.map(products => (
-            <Card key={products.id} />
-          ))
-                    
-        */
-
-          
-
-          products?.map(product => (
+      <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg">
+        {
+            products?.map(product => (
               <Card  key={product.id} {...product}/>
           ))
-          
-
-      }
+        }  
+      </div> 
     </Layout>
   )
 }
