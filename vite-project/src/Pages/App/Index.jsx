@@ -1,5 +1,6 @@
 // HOOKS
 import {useRoutes, BrowserRouter} from 'react-router-dom';
+import { ShoppingCartProvider } from '../../Context';
 
 import "./App.css";
 import Home from '../Home';
@@ -25,10 +26,12 @@ const AppRoutes = () => {
 const App = () => {
   return (
     <div className="bg-red-100">
-      <BrowserRouter>
-        <NavBar />
-        <AppRoutes />      
-      </BrowserRouter>
+      <ShoppingCartProvider>
+        <BrowserRouter>
+          <NavBar />
+          <AppRoutes />      
+        </BrowserRouter>
+      </ShoppingCartProvider>
     </div>
   )
 }

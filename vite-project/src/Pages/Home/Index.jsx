@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import Layout from "../../Components/Layout"
 import Card from "../../Components/Card"
 const Home = () => {
+  
   const [products, setProducts] = useState([])
 
   useEffect(()=>{
@@ -10,8 +11,6 @@ const Home = () => {
     .then(response => response.json())
     .then(data => setProducts(data))
     .catch(error => console.error(error))
-
-
   }, [])
 
   return (
