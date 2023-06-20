@@ -1,8 +1,10 @@
 import {useContext} from 'react'
+import { ShoppingCartContex } from '../../Context'
+
 
 const Card = ({id, price, category: {name:category_label}, title, images}) => {
-
   const context = useContext(ShoppingCartContex)
+
   return (
     <div className="bg-white cursor-pointer w-56 h-60 rounded-lg">
         <figure className="relative mb-2 w-full h-4/5">
@@ -21,4 +23,4 @@ const Card = ({id, price, category: {name:category_label}, title, images}) => {
   )
 }
 
-export default Card
+export default Card 
