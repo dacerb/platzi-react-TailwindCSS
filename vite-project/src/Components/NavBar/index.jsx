@@ -1,4 +1,5 @@
 import {useContext} from 'react'
+import { ShoppingBagIcon } from '@heroicons/react/24/solid'
 import {NavLink, UNSAFE_DataRouterContext} from 'react-router-dom'
 import { ShoppingCartContex } from '../../Context'
 
@@ -69,8 +70,9 @@ import { ShoppingCartContex } from '../../Context'
                 className={({isActive}) => isActive ? activeStyle: undefined}> 
                 Signin</NavLink>
             </li>
-            <li>
-            🛒 {context.count}
+            <li className='flex items-center'>
+            <ShoppingBagIcon className='h-6 w-6 text-black'/>
+            <div>{context.count}</div>
             </li>
         </ul>
     </nav>
