@@ -21,7 +21,6 @@ const ProductDetail = () => {
                 <XMarkIcon className="h-6 w-6 text-black-500"/>
             </div>
             <figure>
-                <img src={context.productToShow.images[0]} alt="" />
             </figure>
         </div>
     </aside>
