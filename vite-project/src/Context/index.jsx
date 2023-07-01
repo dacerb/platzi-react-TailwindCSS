@@ -1,4 +1,4 @@
-import {createContext, useState} from 'react'
+import {createContext, useState, useEffect} from 'react'
 
 export const ShoppingCartContex = createContext()
 
@@ -15,6 +15,13 @@ export const ShoppingCartProvider = ({children}) => {
     // Product Detail - Show product
     const [productToShow, setProductToShow] = useState({})
 
+    // Shopping Cart, add shopping cart
+    const [cartProducts, setCartProducts] = useState([])
+
+    useEffect(() => {
+        console.log("update cart: ", cartProducts)
+      }, [cartProducts])
+
     return (
         <ShoppingCartContex.Provider value={{
             count, 
@@ -23,6 +30,8 @@ export const ShoppingCartProvider = ({children}) => {
             closeProductDetail,
             isProdctDetailOpne,
             productToShow,
+            cartProducts,
+            setCartProducts,
             setProductToShow
         }}>
 
