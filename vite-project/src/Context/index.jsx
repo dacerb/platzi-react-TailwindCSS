@@ -25,6 +25,11 @@ export const ShoppingCartProvider = ({children}) => {
     // Shopping Cart, add shopping cart
     const [cartProducts, setCartProducts] = useState([])
 
+
+    // Shopping Cart . Oder
+    const [order, setOrder] = useState([])
+
+
     useEffect(() => {
         console.log("update cart: ", cartProducts)
       }, [cartProducts])
@@ -42,7 +47,9 @@ export const ShoppingCartProvider = ({children}) => {
             openCheckoutSiteMenu,
             closeCheckoutSiteMenu,
             setCartProducts,
-            setProductToShow
+            setProductToShow,
+            order, 
+            setOrder
         }}>
 
             {children}
