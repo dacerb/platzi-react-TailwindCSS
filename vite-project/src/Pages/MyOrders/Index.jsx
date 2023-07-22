@@ -6,15 +6,15 @@ import OrdersCard from '../../Components/OrdersCard'
 
 const MyOrders = () => {
   const context = useContext(ShoppingCartContex)
+  console.log('contexto ', context.order)
 
   return (
     <Layout>
       MyOrders
       {
         context.order.map((order, index) => {
-          return <Link to={`/my-orders/${order.id}`}>
+          return <Link key={index} to={`/my-orders/${index}`}>
              <OrdersCard 
-              key={index}
                 totalPrice={order.totalPrice} 
                 totalProducts={order.totalProducts}
               />
