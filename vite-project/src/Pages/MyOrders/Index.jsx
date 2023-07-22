@@ -11,7 +11,7 @@ const MyOrders = () => {
 
   return (
     <Layout>
-      MyOrders
+      <h1 className='font-medium text-xl'>MyOrders</h1>
       {
         context.order.map((order, index) => {
           return <Link key={index} to={`/my-orders/${index}`}>
