@@ -31,7 +31,7 @@ export const ShoppingCartProvider = ({children}) => {
 
 
     useEffect(() => {
-        console.log("update cart: ", cartProducts)
+        //console.log("update cart: ", cartProducts)
       }, [cartProducts])
 
     return (

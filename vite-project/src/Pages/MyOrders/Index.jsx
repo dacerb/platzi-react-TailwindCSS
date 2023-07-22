@@ -6,7 +6,8 @@ import OrdersCard from '../../Components/OrdersCard'
 
 const MyOrders = () => {
   const context = useContext(ShoppingCartContex)
-  console.log('contexto ', context.order)
+  //console.log('contexto ', context.order)
+
 
   return (
     <Layout>
