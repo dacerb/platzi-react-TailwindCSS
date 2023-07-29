@@ -29,11 +29,36 @@ export const ShoppingCartProvider = ({children}) => {
     // Shopping Cart . Oder
     const [order, setOrder] = useState([])
 
-
-    useEffect(() => {
+    //useEffect(() => {
         //console.log("update cart: ", cartProducts)
-      }, [cartProducts])
+    //  }, [cartProducts])
 
+    // Get products
+    
+    const [products, setProducts] = useState([])
+
+    useEffect(()=>{
+        fetch('https://api.escuelajs.co/api/v1/products')
+        .then(response => response.json())
+        .then(data => setProducts(data))
+        .catch(error => console.error(error))
+      }, [])
+
+    // Get products Filtered
+    const [filteredProducts, setFilteredProducts] = useState(null)
+
+    // Get products by title
+    const [seachByTitle, setSeachByTitle] = useState(null)
+
+    const filteredProductsByTitle = ( products, seachByTitle ) => {
+        return products?.filter(product => product?.title.toLocaleLowerCase().includes(seachByTitle.toLocaleLowerCase()))
+    }
+    
+    useEffect(()=>{
+        if(seachByTitle) setFilteredProducts(filteredProductsByTitle(products, seachByTitle))
+        //console.log("useEffect total items: ", products.length, " products filter by ", seachByTitle, " result: ", filteredProducts.length, " r ",  filteredProducts)
+    }, [products, seachByTitle])
+    
     return (
         <ShoppingCartContex.Provider value={{
             count, 
@@ -49,7 +74,13 @@ export const ShoppingCartProvider = ({children}) => {
             setCartProducts,
             setProductToShow,
             order, 
-            setOrder
+            setOrder,
+            products, 
+            setProducts,
+            seachByTitle,
+            setSeachByTitle,
+            filteredProducts, 
+            setFilteredProducts
         }}>
 
             {children}
