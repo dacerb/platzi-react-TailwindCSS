@@ -3,14 +3,14 @@ import {useRoutes, BrowserRouter} from 'react-router-dom';
 import { ShoppingCartProvider } from '../../Context';
 
 import "./App.css";
-import Home from '../Home/index.jsx';
-import MyAccount from '../../MyAccount/Index.jsx';
-import MyOrder from '../../MyOrder/Index.jsx';
-import MyOrders from '../../MyOrders/Index.jsx';
-import SignIn from '../../SignIn/Index.jsx';
-import NotFound from '../../NotFound/Index.jsx';
-import NavBar from '../../Components/NavBar/index.jsx'
-import CheckoutSiteMenu from '../../Components/CheckoutSiteMenu/index.jsx';
+import Home from '../Home';
+import MyAccount from '../MyAccount';
+import MyOrder from '../MyOrder';
+import MyOrders from '../MyOrders';
+import SignIn from '../SignIn';
+import NotFound from '../NotFound';
+import NavBar from '../../Components/NavBar'
+import CheckoutSiteMenu from '../../Components/CheckoutSiteMenu';
 
 const AppRoutes = () => {
   const routes = useRoutes([
