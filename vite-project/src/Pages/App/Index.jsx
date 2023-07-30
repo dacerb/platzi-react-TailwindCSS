@@ -4,11 +4,11 @@ import { ShoppingCartProvider } from '../../Context';
 
 import "./App.css";
 import Home from '../Home/index.jsx';
-import MyAccount from '../MyAccount/Index.jsx';
-import MyOrder from '../MyOrder/Index.jsx';
-import MyOrders from '../MyOrders/Index.jsx';
-import SignIn from '../SignIn/Index.jsx';
-import NotFound from '../NotFound/Index.jsx';
+import MyAccount from '../../MyAccount/Index.jsx';
+import MyOrder from '../../MyOrder/Index.jsx';
+import MyOrders from '../../MyOrders/Index.jsx';
+import SignIn from '../../SignIn/Index.jsx';
+import NotFound from '../../NotFound/Index.jsx';
 import NavBar from '../../Components/NavBar/index.jsx'
 import CheckoutSiteMenu from '../../Components/CheckoutSiteMenu/index.jsx';
 
