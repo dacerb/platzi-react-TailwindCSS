@@ -63,19 +63,19 @@ export const ShoppingCartProvider = ({children}) => {
 
     const filterBy = (searchType, products, seachByTitle, searchByCategory) => {
         if( searchType === 'BY_TITLE'){
-            return setFilteredProducts(filteredProductsByTitle(products, seachByTitle))
+            return filteredProductsByTitle(products, seachByTitle)
         }
 
         if( searchType === 'BY_CATEGORY'){
-            return setFilteredProducts(filteredProductsByCategory(products, searchByCategory))
-        }
-        
-        if( searchType === 'BY_TITLE_AND_CATEGORY'){
-            return setFilteredProducts(filteredProductsByCategory(products, searchByCategory))
+            return filteredProductsByCategory(products, searchByCategory)
         }
 
         if( searchType === 'BY_TITLE_AND_CATEGORY'){
-            return setFilteredProducts(filteredProductsByCategory(products, searchByCategory))
+            return filteredProductsByCategory(products, searchByCategory).filter(product => product?.title.toLocaleLowerCase().includes(seachByTitle.toLocaleLowerCase()))
+        }
+
+        if(!searchType){
+            return products
         }
     }
 

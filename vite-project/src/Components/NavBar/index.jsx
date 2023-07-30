@@ -32,17 +32,17 @@ import { ShoppingCartContex } from '../../Context'
             </li>
             <li>
             <NavLink 
-                to={'/furnitures'}
-                onClick={() => context.setSearchByCategory('furnitures')}
+                to={'/clothes'}
+                onClick={() => context.setSearchByCategory('clothes')}
                 className={({isActive}) => isActive ? activeStyle: undefined}> 
-                Furnitures</NavLink>
+                Clothes</NavLink>
             </li>
             <li>
             <NavLink 
-                to={'/toys'}
-                onClick={() => context.setSearchByCategory('toys')}
+                to={'/shoes'}
+                onClick={() => context.setSearchByCategory('shoes')}
                 className={({isActive}) => isActive ? activeStyle: undefined}> 
-                Toys</NavLink>
+                Shoes</NavLink>
             </li>
             <li>
             <NavLink 

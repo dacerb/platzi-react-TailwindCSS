@@ -31,6 +31,7 @@ const CheckoutSiteMenu = () => {
     context.setCartProducts([])
     context.setCount(0)
     context.closeCheckoutSiteMenu()
+    context.setSeachByTitle(null)
 
    // console.log(context.order)
   }
