@@ -3,7 +3,7 @@ import {useRoutes, BrowserRouter} from 'react-router-dom';
 import { ShoppingCartProvider } from '../../Context';
 
 import "./App.css";
-import Home from '../Home';
+import Home from '../Home/Index';
 import MyAccount from '../MyAccount';
 import MyOrder from '../MyOrder';
 import MyOrders from '../MyOrders';
